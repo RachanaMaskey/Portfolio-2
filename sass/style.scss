@@ -10,6 +10,9 @@
 //css for myservice section
 @import './component/myservice';
 
+//css for my selected work section
+@import './component/work';
+
 //for font
 @font-face {
     font-family: "Inter";
@@ -27,9 +30,9 @@ body{
     // width: 1920px;
     
     .hero-section{
-        background: linear-gradient(to right, #ffffff 65%, #f4f6fb 35%);
+        background: linear-gradient(to right, #ffffff 63%, #f4f6fb 37%);
         height: 100vh;
-        padding:0px 100px 0px 200px;
+        padding:0px 200px 0px 200px;
         overflow: hidden;
     }
 }
