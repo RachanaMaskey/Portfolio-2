@@ -1,0 +1,29 @@
+//css for navbar
+@import './component/nav';
+
+//css for navbar
+@import './component/heroinfo';
+
+//for font
+@font-face {
+    font-family: "Inter";
+    src: url("../font/Inter_28pt-regular.ttf") format('truetype');
+}
+
+// *{
+//     outline: 1px solid red;
+// }
+
+body{
+    font-family: "Inter", sans-serif;
+}
+.herocontainer{
+    // width: 1920px;
+    
+    .hero-section{
+        background: linear-gradient(to right, #ffffff 65%, #f4f6fb 35%);
+        height: 100vh;
+        padding:0px 100px;
+        overflow: hidden;
+    }
+}
