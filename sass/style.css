@@ -31,12 +31,12 @@
 }
 
 .hero-info .left-section {
-  max-width: 630px;
+  max-width: 730px;
   min-height: 412px;
   margin-top: 120px;
 }
 .hero-info .left-section p {
-  max-width: 570px;
+  max-width: 670px;
   color: #737D8C;
   font-size: 20px;
 }
@@ -94,14 +94,87 @@
   height: 800px;
 }
 
+.about {
+  height: 90vh;
+  padding: 100px 100px 0px 200px;
+  position: relative;
+}
+.about .aboutimage {
+  width: 500px;
+  height: 500px;
+  border-radius: 1%;
+  background-color: white;
+}
+.about .aboutimage img {
+  width: 500px;
+  height: 500px;
+  margin-top: -15px;
+  margin-left: -15px;
+}
+.about .aboutimage:hover {
+  scale: 1.1;
+}
+.about h2 {
+  font-size: 48px;
+  font-weight: 400;
+}
+.about p {
+  font-size: 18px;
+  color: #737D8C;
+  font-weight: 400;
+}
+.about .info {
+  width: 50%;
+  gap: 50px;
+}
+.about .info span {
+  font-size: 56px;
+  color: #684FFF;
+  font-weight: 400;
+}
+.about .info p {
+  font-size: 18px;
+  font-weight: 400;
+}
+.about .sayhi {
+  background-color: #684FFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+.about .sayhi:hover {
+  box-shadow: 0px 0px 10px 0px #684FFF;
+}
+.about .circle {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+}
+.about .circle img {
+  width: 30%;
+  height: 50%;
+}
+.about .dots {
+  position: absolute;
+  top: 130px;
+  right: 0px;
+  bottom: 0px;
+  left: -15px;
+  z-index: -1;
+}
+.about .dots img {
+  width: 25%;
+  height: 25%;
+  rotate: 90deg;
+}
+
 @font-face {
   font-family: "Inter";
   src: url("../font/Inter_28pt-regular.ttf") format("truetype");
 }
-* {
-  outline: 1px solid red;
-}
-
 body {
   font-family: "Inter", sans-serif;
 }
@@ -109,6 +182,6 @@ body {
 .herocontainer .hero-section {
   background: linear-gradient(to right, #ffffff 65%, #f4f6fb 35%);
   height: 100vh;
-  padding: 0px 100px;
+  padding: 0px 100px 0px 200px;
   overflow: hidden;
 }/*# sourceMappingURL=style.css.map */
