@@ -19,10 +19,10 @@
                 &::after {
                     content: "";
                     position: absolute;
-                    top: 55%;
+                    top: 65%;
                     left: 0;
                     width: 100%; // or adjust for partial highlight
-                    height: 40%;
+                    height: 35%;
                     background-color: #e6e0f8;
                     z-index: -1;
                     border-radius: 4px;
@@ -60,7 +60,7 @@
         position: absolute;
         top: 50px;
         right: 0;
-        left:590px;
+        left:500px;
         bottom:0px;
         img{
             width: 650px;
