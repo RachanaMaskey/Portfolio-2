@@ -247,13 +247,13 @@
 }
 
 .myworks {
-  padding: 5px 200px 0px 200px;
+  padding: 5px 200px 20px 200px;
   background-color: rgba(223, 227, 235, 0.4);
 }
 .myworks h4 {
   font-size: 40px;
   font-weight: 400;
-  padding-top: 90px;
+  padding-top: 50px;
   position: relative;
 }
 .myworks h4::after {
@@ -270,31 +270,84 @@
   width: 100%;
   height: 300px;
 }
-.myworks .mywork-content a {
-  color: #0A1931;
+.myworks .card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 350px;
+}
+.myworks .card .iconhover {
+  position: relative;
+  display: inline-block;
+}
+.myworks .card .iconhover a {
   text-decoration: none;
+  color: #684FFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
-.myworks .mywork-content .iconbefore {
+.myworks .card .iconhover a i {
   font-size: 20px;
-  transition: transform 0.3s ease;
+  font-weight: 200px;
 }
-.myworks .mywork-content .iconafter {
+.myworks .card .iconhover .iconbefore {
+  opacity: 1;
+  z-index: 2;
+}
+.myworks .card .iconhover .iconafter {
+  width: 150px;
   opacity: 0;
-  transform: translateX(-10px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  font-size: 16px;
-  font-weight: 600;
+  z-index: 1;
+  transform: translateX(-20px);
+}
+.myworks .card .iconhover .iconafter i {
+  margin-left: 10px;
+}
+.myworks .card .iconhover .iconbefore:hover {
+  opacity: 0;
+  pointer-events: none;
+}
+.myworks .card .iconhover .iconbefore:hover + .iconafter {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.slider {
+  padding: 5px 200px 20px 200px;
+}
+.slider .slider-content {
+  width: 300px;
+}
+.slider .slider-content .number {
+  font-size: 32px;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
   color: #684FFF;
 }
-.myworks .mywork-content .iconafter i {
-  padding-left: 15px;
+.slider .slider-content .number::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background-color: #e6e0f8;
+  z-index: -1;
+  border-radius: 4px;
 }
-.myworks .mywork-content:hover .iconbefore {
-  display: none;
+.slider .slider-image div {
+  width: 150px;
+  height: 110px;
+  background-color: rgba(223, 227, 235, 0.4);
+  border-radius: 10px;
 }
-.myworks .mywork-content:hover .iconafter {
-  opacity: 1;
-  transform: translateX(0);
+.slider .slider-image div:hover {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  scale: 1.1;
 }
 
 @font-face {
