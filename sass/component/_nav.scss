@@ -2,7 +2,6 @@
     // height:95px;
     padding:24px 0px;
     position: sticky;
-
     ul{
         list-style-type:none;
         li{
@@ -29,6 +28,24 @@
             color:#684FFF;
             background-color: #F5EFFF;
         }
+    }
+    .navmenu{
+        display: none;
+    }
+    @media screen and (max-width: 768px) {
+        padding:14px 0px;
+        background-color:   #ffffff;
+        .nav-list{
+            display: none;
+        }
+        .navmenu{
+            display: block;
+            a{
+                text-decoration: none;
+                color:#0A1931;
+            }
+        }
+        
     }
 }
    

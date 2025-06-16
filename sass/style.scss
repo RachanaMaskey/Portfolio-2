@@ -28,7 +28,7 @@
 //for font
 @font-face {
     font-family: "Inter";
-    src: url("../font/Inter_28pt-regular.ttf") format('truetype');
+    src: url("../font/static/Inter_18pt-regular.ttf") format('truetype');
 }
 
 // *{
@@ -39,12 +39,18 @@ body{
     font-family: "Inter", sans-serif;
 }
 .herocontainer{
-    // width: 1920px;
-    
     .hero-section{
-        background: linear-gradient(to right, #ffffff 63%, #f4f6fb 37%);
+        background: linear-gradient(to right, #ffffff 63%,  #ffffff 37%);
         height: 100vh;
         padding:0px 200px 0px 200px;
         overflow: hidden;
+        @media screen and (max-width: 768px) {
+            height: 80vh;
+            padding:0px 50px 0px 50px;
+            background-color: none;
+            .right-section{
+                display:  #ffffff;
+            }
+        }
     }
 }
