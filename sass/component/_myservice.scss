@@ -1,5 +1,5 @@
 .myservice{
-    height:85vh;
+    // height:85vh;
     padding:80px 200px 0px 200px;
     h4{
         font-size: 40px;
@@ -79,21 +79,21 @@
             }
         }  
     }
-    // @media screen and (max-width: 768px) {
-    //     // height:85vh;
-    //     padding:30px 50px 0px 50px;
-    //     .service-content{
-    //         margin-top: 40px;
-    //         min-height:200px;
-    //         h5{
-    //             width:90%;
-    //             font-size: 22px;
-    //             margin-top: 50px;
-    //         }
-    //         .iconbefore{
-    //             font-size: 15px;
-    //             transition: transform 0.3s ease;
-    //         }
-    //     }
-    // }
+    @media screen and (max-width: 768px) {
+        // height:85vh;
+        padding:30px 30px 50px 30px;
+        .service-content{
+            margin-top: 40px;
+            min-height:200px;
+            h5{
+                width:90%;
+                font-size: 22px;
+                margin-top: 50px;
+            }
+            .iconbefore{
+                font-size: 15px;
+                transition: transform 0.3s ease;
+            }
+        }
+    }
 }

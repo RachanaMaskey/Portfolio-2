@@ -1,6 +1,6 @@
 .contact{
     background-color: #DFE3EB4D;
-    height:90vh;
+    height:100vh;
     overflow: hidden;
     position: relative;
     img{
@@ -96,5 +96,101 @@
                 }
             }
         }
+    }
+    @media screen and (max-width: 768px) {
+        img{
+            width:300px;
+            height:150px;
+        }
+        .dot{
+            top: 20px;
+            left:500px;
+            img{
+                width: 450px;
+                height: 120px;       
+            }
+        }
+        .contact-content{
+            padding:5px 50px 20px 50px;
+            margin-top:50px;
+        }
+    }
+    @media screen and (max-width: 430px) {
+        img{
+            width:200px;
+            height:100px;
+        }
+        .dot{
+            top: 20px;
+            left:200px;
+            img{
+                width: 300px;
+                height: 100px;       
+            }
+        }
+        .contact-content{
+            padding:5px 20px 20px 20px;
+            margin-top:50px;
+            h5{
+                font-size: 22px;
+            }
+            .contact-form{
+                min-width:400px;
+                min-height:300px;
+                border-radius: 5px;
+                form{
+                    padding:5px;
+                    .name{
+                        input{
+                            max-width: 165px;
+                        }
+                    }
+                    .message{
+                        input{
+                        height:80px;
+                        }
+                    }
+                    input{
+                        max-width: 450px;
+                    }
+                }
+            }
+            .get-in-touch{
+                border-radius: 5px;
+                p{
+                    font-size: 14px;
+                }
+                .get-icon{
+                    width:80px;
+                    height:35px;
+                    border-radius: 50%;
+                    background-color: #F5EFFF;
+                    svg{
+                        width:35px;
+                        height:35px;
+                    }
+                }
+                .socialmedia{
+                    font-size: 20px;
+                    a{
+                        width:40px;
+                        height:40px;
+                        border:1px solid #DFE3EB;
+                        border-radius:50%;
+                        color:black;
+                        // i{
+                        //     padding: 15px;
+                        // }
+                        &:hover{
+                            background-color:#684FFF ;
+                            color:white;
+                        
+                        }
+                        
+                    }
+                }
+            }
+        }
+        
     }
 }

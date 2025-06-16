@@ -75,7 +75,7 @@
         }
     }
     @media screen and (max-width: 768px) {
-        padding:0px 50px 0px 50px; 
+        padding:30px 50px 0px 50px; 
         height:85vh;
         .aboutimage{
             width:300px;
@@ -149,5 +149,8 @@
                 rotate: 90deg;
             }
         }
+    }
+    @media screen and (max-width: 430px) {
+        height:100vh;
     }
 }

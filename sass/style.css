@@ -114,39 +114,50 @@
 }
 @media screen and (max-width: 768px) {
   .hero-info .left-section {
-    max-width: 430px;
-    min-height: 212px;
-    margin-top: 90px;
+    max-width: 630px;
+    min-height: 412px;
+    margin-top: 100px;
   }
   .hero-info .left-section p {
-    max-width: 370px;
-    font-size: 14px;
+    max-width: 400px;
+    font-size: 15px;
   }
   .hero-info .left-section h1 {
-    font-size: 40px;
-  }
-  .hero-info .left-section h1 .designer::after {
-    border-radius: 2px;
-  }
-  .hero-info .left-section button {
-    font-size: 12px;
-  }
-  .hero-info .left-section .hireme {
-    margin-right: 10px;
-    padding: 23px;
+    max-width: 400px;
+    font-size: 50px;
+    font-weight: 400;
   }
   .hero-info .right-section {
     display: none;
   }
+  .hero-info .follow {
+    font-size: 16px;
+  }
+  .hero-info .follow a {
+    border: 1px solid #737D8C;
+    border-radius: 10%;
+    padding: 4px;
+    color: black;
+  }
+  .hero-info .follow a:hover {
+    background-color: #684FFF;
+    color: white;
+  }
   .hero-info .hero-img {
-    top: 105px;
+    position: absolute;
+    top: 50px;
     right: 0;
-    left: 280px;
+    left: 230px;
     bottom: 0px;
   }
   .hero-info .hero-img img {
-    width: 350px;
-    height: 400px;
+    width: 650px;
+    height: 800px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .hero-info .hero-img {
+    display: none;
   }
 }
 
@@ -228,7 +239,7 @@
 }
 @media screen and (max-width: 768px) {
   .about {
-    padding: 0px 50px 0px 50px;
+    padding: 30px 50px 0px 50px;
     height: 85vh;
   }
   .about .aboutimage {
@@ -302,9 +313,13 @@
     rotate: 90deg;
   }
 }
+@media screen and (max-width: 430px) {
+  .about {
+    height: 100vh;
+  }
+}
 
 .myservice {
-  height: 85vh;
   padding: 80px 200px 0px 200px;
 }
 .myservice h4 {
@@ -379,7 +394,7 @@
 }
 @media screen and (max-width: 768px) {
   .myservice {
-    padding: 30px 50px 0px 50px;
+    padding: 30px 30px 50px 30px;
   }
   .myservice .service-content {
     margin-top: 40px;
@@ -465,6 +480,11 @@
 }
 @media screen and (max-width: 768px) {
   .myworks {
+    padding: 5px 200px 20px 150px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .myworks {
     padding: 5px 50px 20px 50px;
   }
 }
@@ -506,7 +526,7 @@
 }
 @media screen and (max-width: 768px) {
   .slider {
-    padding: 5px 50px 20px 50px;
+    padding: 5px 30px 20px 30px;
   }
 }
 
@@ -578,6 +598,88 @@
 }
 .testimonial .client-testimonial .rating p {
   font-size: 30px;
+}
+@media screen and (max-width: 768px) {
+  .testimonial {
+    padding: 5px 30px 20px 30px;
+  }
+  .testimonial .hireme {
+    max-width: 700px;
+    width: 100%;
+    max-height: 312px;
+  }
+  .testimonial .hireme p {
+    font-size: 22px;
+    padding: 50px 200px 10px 200px;
+    color: white;
+  }
+  .testimonial .hireme .hiremebutton {
+    width: 150px;
+    height: 50px;
+    background-color: #684FFF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 0px auto;
+  }
+  .testimonial .hireme .hiremebutton:hover {
+    box-shadow: 0px 0px 10px 0px #684FFF;
+  }
+  .testimonial .client-testimonial .client {
+    margin-bottom: 20px;
+  }
+  .testimonial .client-testimonial .rating .top-rating img {
+    width: 20px;
+    height: 20px;
+  }
+  .testimonial .client-testimonial .rating .top-rating p {
+    font-size: 15px;
+  }
+  .testimonial .client-testimonial .rating p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .testimonial {
+    padding: 5px 20px 20px 20px;
+  }
+  .testimonial .hireme {
+    max-width: 400px;
+    width: 100%;
+    max-height: 252px;
+  }
+  .testimonial .hireme p {
+    font-size: 18px;
+    padding: 50px 100px 10px 100px;
+    color: white;
+  }
+  .testimonial .hireme .hiremebutton {
+    width: 150px;
+    height: 50px;
+    background-color: #684FFF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 0px auto;
+  }
+  .testimonial .hireme .hiremebutton:hover {
+    box-shadow: 0px 0px 10px 0px #684FFF;
+  }
+  .testimonial .client-testimonial .rating .quotation {
+    position: absolute;
+    top: 10px;
+    left: 70%;
+  }
+  .testimonial .client-testimonial .rating .top-rating img {
+    width: 20px;
+    height: 20px;
+  }
+  .testimonial .client-testimonial .rating .top-rating p {
+    font-size: 15px;
+  }
+  .testimonial .client-testimonial .rating p {
+    font-size: 20px;
+  }
 }
 
 .blognews {
@@ -660,10 +762,23 @@
   background-color: white;
   scale: 1.1;
 }
+@media screen and (max-width: 768px) {
+  .blognews {
+    padding: 5px 150px 20px 150px;
+  }
+  .blognews .card {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .blognews {
+    padding: 5px 50px 20px 50px;
+  }
+}
 
 .contact {
   background-color: rgba(223, 227, 235, 0.3019607843);
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
   position: relative;
 }
@@ -752,15 +867,113 @@
   background-color: #684FFF;
   color: white;
 }
+@media screen and (max-width: 768px) {
+  .contact img {
+    width: 300px;
+    height: 150px;
+  }
+  .contact .dot {
+    top: 20px;
+    left: 500px;
+  }
+  .contact .dot img {
+    width: 450px;
+    height: 120px;
+  }
+  .contact .contact-content {
+    padding: 5px 50px 20px 50px;
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .contact img {
+    width: 200px;
+    height: 100px;
+  }
+  .contact .dot {
+    top: 20px;
+    left: 200px;
+  }
+  .contact .dot img {
+    width: 300px;
+    height: 100px;
+  }
+  .contact .contact-content {
+    padding: 5px 20px 20px 20px;
+    margin-top: 50px;
+  }
+  .contact .contact-content h5 {
+    font-size: 22px;
+  }
+  .contact .contact-content .contact-form {
+    min-width: 400px;
+    min-height: 300px;
+    border-radius: 5px;
+  }
+  .contact .contact-content .contact-form form {
+    padding: 5px;
+  }
+  .contact .contact-content .contact-form form .name input {
+    max-width: 165px;
+  }
+  .contact .contact-content .contact-form form .message input {
+    height: 80px;
+  }
+  .contact .contact-content .contact-form form input {
+    max-width: 450px;
+  }
+  .contact .contact-content .get-in-touch {
+    border-radius: 5px;
+  }
+  .contact .contact-content .get-in-touch p {
+    font-size: 14px;
+  }
+  .contact .contact-content .get-in-touch .get-icon {
+    width: 80px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #F5EFFF;
+  }
+  .contact .contact-content .get-in-touch .get-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+  .contact .contact-content .get-in-touch .socialmedia {
+    font-size: 20px;
+  }
+  .contact .contact-content .get-in-touch .socialmedia a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #DFE3EB;
+    border-radius: 50%;
+    color: black;
+  }
+  .contact .contact-content .get-in-touch .socialmedia a:hover {
+    background-color: #684FFF;
+    color: white;
+  }
+}
+
+footer span {
+  color: #684FFF;
+}
+@media screen and (max-width: 768px) {
+  footer p {
+    font-size: 12px;
+  }
+}
 
 @font-face {
   font-family: "Inter";
-  src: url("../font/Inter_28pt-regular.ttf") format("truetype");
+  src: url("../font/static/Inter_18pt-regular.ttf") format("truetype");
 }
 body {
   font-family: "Inter", sans-serif;
 }
 
+.herocontainer {
+  overflow: hidden;
+}
 .herocontainer .hero-section {
   background: linear-gradient(to right, #ffffff 63%, #ffffff 37%);
   height: 100vh;
@@ -769,11 +982,15 @@ body {
 }
 @media screen and (max-width: 768px) {
   .herocontainer .hero-section {
-    height: 80vh;
     padding: 0px 50px 0px 50px;
     background-color: none;
   }
   .herocontainer .hero-section .right-section {
     display: #ffffff;
+  }
+}
+@media screen and (max-width: 430px) {
+  .herocontainer .hero-section {
+    padding: 0px 30px 0px 30px;
   }
 }/*# sourceMappingURL=style.css.map */
