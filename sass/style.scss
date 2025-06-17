@@ -44,15 +44,15 @@ body{
 .herocontainer{
     overflow: hidden;
     .hero-section{
-        background: linear-gradient(to right, #ffffff 63%,  #ffffff 37%);
-        height: 100vh;
+        background: linear-gradient(to right, #ffffff 63%,#DFE3EB66 37%);
         padding:0px 200px 0px 200px;
+        margin-bottom: 0px;
         overflow: hidden;
         @media screen and (max-width: 768px) {
             padding:0px 50px 0px 50px;
-            background-color: none;
+            background-color: white;
             .right-section{
-                display:  #ffffff;
+               background-color: white;
             }
         }
         @media screen and (max-width: 430px) {

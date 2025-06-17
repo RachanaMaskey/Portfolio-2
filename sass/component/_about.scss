@@ -1,37 +1,34 @@
 .about{
-    height:90vh;
-    padding:100px 200px 0px 200px;
-    // background: linear-gradient(to bottom,#F8FAFC, white);
+    padding:50px 200px 0px 200px;
     position:relative;
     .aboutimage{
         width:500px;
         height:500px;
-        border-radius: 1%;
+        border-radius: 5px;
         background-color: white;
         img{
-            width:500px;
-            height:500px;
-            margin-top:-15px;
-            margin-left:-15px;
+            width:100%;
+            height:100%;
+            // margin-top:-15px;
+            // margin-left:-15px;
         }
         &:hover{
             scale: 1.1;
+            transition: all 0.5s ease;
         }
     }
     h2{
-        font-size: 48px;
+        font-size: 46px;
         font-weight: 400;
     }
     p{
-        font-size: 18px;
+        font-size: 16px;
         color: #737D8C;
         font-weight: 400;
     }
     .info{
-        width:50%;
-        gap:50px;
         span{
-            font-size: 56px;
+            font-size: 46px;
             color:#684FFF;
             font-weight: 400;
         }
@@ -76,59 +73,32 @@
     }
     @media screen and (max-width: 768px) {
         padding:30px 50px 0px 50px; 
-        height:85vh;
+        // height:85vh;
         .aboutimage{
-            width:300px;
-            height:300px;
-            margin:20px;
+            width:400px;
+            height:400px;
+            margin-bottom:40px;
             margin: auto;
             img{
                 width:100%;
                 height:100%;
-                margin-top:0px;
-                margin-left:0px;
             }
         }
-        h2{
-            font-size: 28px;
-            width:80%;
-            margin: auto;
-            margin-top: 10px !important;
-            margin-bottom: 10px !important;
+         h2{
+            font-size: 36px;
+            font-weight: 400;
         }
         p{
-            margin-bottom: 10px !important;
-            font-size: 12px;
-            width:80%;
-            margin: auto;
-        }
-        .info{
-            width:80%;
-            margin: auto;
-            .experience{
-                gap:0px !important;
-            }
-            span{
-                font-size: 26px;
-            }
-            p{
-                font-size: 12px;
-                margin-top: 0px !important;
-                padding-top: 5px !important;
-                width:30%;
-            }
+            font-size: 16px;
+            color: #737D8C;
+            font-weight: 400;
         }
         .sayhi{
             border-radius: 2px;
-            font-size: 10px;
-            margin-top: 10px !important;
-            margin-left: 11% !important;
+            font-size: 13px;
             button{
                 padding: 0px !important;
                 margin: 0px !important;
-            }
-            &:hover{
-                box-shadow: 0px 0px 10px 0px #684FFF;
             }
         }
         .circle{
@@ -151,6 +121,17 @@
         }
     }
     @media screen and (max-width: 430px) {
-        height:100vh;
+        // padding:30px 50px 0px 30px; 
+        .aboutimage{
+            width:300px;
+            height:300px;
+            margin-bottom:40px;
+            margin: auto;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+     
     }
 }

@@ -1,6 +1,5 @@
 .contact{
     background-color: #DFE3EB4D;
-    height:100vh;
     overflow: hidden;
     position: relative;
     img{
@@ -25,7 +24,7 @@
     .contact-content{
         padding:5px 200px 20px 200px;
         margin-top:120px;
-        position: absolute;
+        // position: absolute;
         z-index:1;
         h5{
             font-size: 32px;
