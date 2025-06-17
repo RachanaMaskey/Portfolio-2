@@ -22,23 +22,20 @@
         }
     }
     .contact-content{
-        padding:5px 200px 20px 200px;
-        margin-top:120px;
-        // position: absolute;
+        padding:0px 200px 20px 200px;
+        margin-top:100px;
+        margin-bottom: 50px;
         z-index:1;
         h5{
             font-size: 32px;
             font-weight: 400;
         }
         .contact-form{
-            min-width:600px;
-            min-height:400px;
             border-radius: 8px;
-            form{
-                padding:20px;
+            form{ 
                 .name{
                     input{
-                        max-width: 265px;
+                        max-width: 340px;
                     }
                 }
                 .message{
@@ -50,6 +47,7 @@
                     max-width: 550px;
                 }
                 button{
+                    transition: all 0.5s ease;
                     background-color: #684FFF; 
                     color:white;
                     border:none;
@@ -66,8 +64,9 @@
                 font-size: 14px;
             }
             .get-icon{
-                width:80px;
-                height:35px;
+                width:calc(100% - 40px);
+                width:40px;
+                height:40px;
                 border-radius: 50%;
                 background-color: #F5EFFF;
                 svg{
@@ -83,15 +82,10 @@
                     border:1px solid #DFE3EB;
                     border-radius:50%;
                     color:black;
-                    // i{
-                    //     padding: 15px;
-                    // }
                     &:hover{
                         background-color:#684FFF ;
-                        color:white;
-                    
-                    }
-                    
+                        color:white;    
+                    } 
                 }
             }
         }
@@ -121,14 +115,14 @@
         }
         .dot{
             top: 20px;
-            left:200px;
+            left:250px;
             img{
                 width: 300px;
                 height: 100px;       
             }
         }
         .contact-content{
-            padding:5px 20px 20px 20px;
+            padding:0px 20px 20px 20px;
             margin-top:50px;
             h5{
                 font-size: 22px;
@@ -141,7 +135,7 @@
                     padding:5px;
                     .name{
                         input{
-                            max-width: 165px;
+                            max-width: 185px;
                         }
                     }
                     .message{
@@ -154,42 +148,6 @@
                     }
                 }
             }
-            .get-in-touch{
-                border-radius: 5px;
-                p{
-                    font-size: 14px;
-                }
-                .get-icon{
-                    width:80px;
-                    height:35px;
-                    border-radius: 50%;
-                    background-color: #F5EFFF;
-                    svg{
-                        width:35px;
-                        height:35px;
-                    }
-                }
-                .socialmedia{
-                    font-size: 20px;
-                    a{
-                        width:40px;
-                        height:40px;
-                        border:1px solid #DFE3EB;
-                        border-radius:50%;
-                        color:black;
-                        // i{
-                        //     padding: 15px;
-                        // }
-                        &:hover{
-                            background-color:#684FFF ;
-                            color:white;
-                        
-                        }
-                        
-                    }
-                }
-            }
         }
-        
     }
 }

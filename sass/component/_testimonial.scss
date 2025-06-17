@@ -1,5 +1,5 @@
 .testimonial{
-    padding:5px 200px 20px 200px;
+    padding:0px 200px 0px 200px;
     .hireme{
         background-color: #0A1931;
         max-width:1320px;
@@ -38,8 +38,16 @@
                 border-radius: 2px;
             }
         }
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+            color: var(--bs-nav-pills-link-active-color);
+            background-color: white;
+        }
         .client{
             .client-content{
+                transition: all 0.5s ease-in-out;
+                .name{
+                    color: black;
+                }
                .ceo{
                     color: #737D8C;
                     span{
@@ -51,6 +59,8 @@
                     scale: 1.1;
                     
                 }
+
+                
             }
         }
         .rating{
@@ -76,7 +86,7 @@
         }
     }
     @media screen and (max-width: 768px) {
-        padding:5px 30px 20px 30px;
+        padding:0px 30px 0px 30px;
         .hireme{
             max-width:700px;
             width:100%;
@@ -101,9 +111,14 @@
         }
         .client-testimonial{
             .client{
-                margin-bottom: 20px;
+                margin-left: 20px;
             }
             .rating{
+                .quotation{
+                position: absolute;
+                top: 10px;
+                left: 70%;
+            }
                 .top-rating{
                     img{
                         width:20px;
@@ -144,6 +159,11 @@
             }
         }
         .client-testimonial{
+            .client{
+                .client-content{
+                    margin: 0px 20px;
+                }  
+            }
             .rating{
                 .quotation{
                     position: absolute;

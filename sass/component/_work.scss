@@ -1,6 +1,5 @@
 .myworks{
-    // height:100vh;
-    padding:5px 200px 20px 200px;
+    padding:0px 200px 40px 200px;
     background-color: #DFE3EB66;
     h4{
         font-size: 40px;
@@ -11,7 +10,6 @@
             content: "";
             position: absolute;
             left: 47%;
-            // transform: translateX(-50%);
             bottom: -10px;
             width: 70px;
             height: 3px;
@@ -24,7 +22,7 @@
         height:300px;
     }
     .card{
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        transition: all 0.5s ease;
         height:350px;
         .iconhover {
             position: relative;
@@ -35,7 +33,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                transition: opacity 0.4s ease, transform 0.4s ease;
+                // transition: opacity 0.4s ease, transform 0.4s ease;
                 i{
                     font-size: 20px;
                     font-weight: 200px;
@@ -46,32 +44,37 @@
                 z-index: 2;
             }
             .iconafter {
+                display: none;
+            }
+        }
+        &:hover{
+            scale: 1.1;
+            // transition: all 0.5s ease;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            .iconbefore {
+                display: none;
+            }
+            .iconafter {
+                display: block;
+                // transition: all 0.5s ease;
                 width:150px;
-                opacity: 0;
-                z-index: 1;
-                transform: translateX(-20px);
+                opacity: 1;
                 i{
                     margin-left: 10px;
                 }
             }
-            .iconbefore:hover {
-                opacity: 0;
-                pointer-events: none;
-            }
-            .iconbefore:hover + .iconafter {
-                opacity: 1;
-                transform: translateY(0);
-                z-index: 3;
-                pointer-events: auto;
-            }
         }
     }
     @media screen and (max-width: 768px) {
-        padding:5px 200px 20px 150px;
+        padding:0px 30px 40px 30px;
+        margin: 0px;
+        .iconafter{
+            font-size: 12px;
+        }
         
     }
     @media screen and (max-width: 430px) {
-        padding:5px 50px 20px 50px;
+        padding:0px 50px 30px 50px;
         
     }
 }
