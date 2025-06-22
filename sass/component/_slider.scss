@@ -23,7 +23,7 @@
     }
     .slider-image{
         div{
-            transition: all 0.5s ease;
+            transition: all 0.3s linear;
             width: 150px;
             height: 110px;
             background-color:#DFE3EB66 ;
@@ -31,12 +31,23 @@
             &:hover{
                 background-color:white ;
                 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                scale: 1.1;
+                scale: 1.03;
             }
         }
     }
     @media screen and (max-width: 768px) {
         padding: 5px 30px 20px 30px;
         
+    }
+    @media screen and (max-width: 430px) {
+        padding: 5px 20px 20px 20px;
+        .slider-image{
+            div{
+                width: 145px;
+                img{
+                    object-fit:cover;
+                }
+            }
+        }    
     }
 }

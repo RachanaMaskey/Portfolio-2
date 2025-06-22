@@ -1,7 +1,5 @@
 .navsection{
-    // height:95px;
     padding:24px 0px;
-    position: sticky;
     ul{
         list-style-type:none;
         li{
@@ -11,13 +9,13 @@
             a{
                 text-decoration: none;
                 color:#0A1931;
-                &:hover{
-                    color: #684FFF;
-                    text-decoration: underline;
-                    text-decoration-color:#684FFF;    
-                    text-decoration-thickness: 2px;
-                    text-underline-offset: 55%; 
-                }
+            }
+            &:hover{
+                color: #684FFF;
+                text-decoration: underline;
+                text-decoration-color:#684FFF;    
+                text-decoration-thickness: 3px;
+                text-underline-offset: 55%; 
             }
         }
     }
@@ -30,20 +28,25 @@
         }
     }
     .navmenu{
+        button{
+            border: none;
+        }
         display: none;
     }
     @media screen and (max-width: 768px) {
         padding:14px 0px;
-        background-color:   #ffffff;
+        background-color:#ffffff;
         .nav-list{
             display: none;
         }
         .navmenu{
             display: block;
-            a{
-                text-decoration: none;
-                color:#0A1931;
+            .dropdown{
+                li:hover{
+                    text-decoration: none;
+                }
             }
+            
         }
         
     }

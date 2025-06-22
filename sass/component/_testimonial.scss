@@ -30,21 +30,41 @@
             &::after{
                 content: "";
                 position: absolute;
-                left: 46%;
+                left: 50%;
                 bottom: -10px;
                 width: 80px;
                 height: 3px;
+                transform: translateX(-50%);
                 background-color: #684FFF; 
                 border-radius: 2px;
             }
         }
         .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
             color: var(--bs-nav-pills-link-active-color);
-            background-color: white;
+            background-color:#DFE3EB66;
         }
         .client{
+            .nav-link {
+                position: relative;
+                &::after {
+                content: "";
+                border: 15px solid transparent;
+                position: absolute;
+                top: 50%;
+                right: -30px;
+                transform: translateY(-50%);
+                border-left-color: #DFE3EB66;
+                opacity: 0;
+                transition: all 0.2s linear;
+                }
+                &.active {
+                &::after {
+                    opacity: 1;
+                }
+                }
+            }
             .client-content{
-                transition: all 0.5s ease-in-out;
+                transition: all 0.3s linear;
                 .name{
                     color: black;
                 }
@@ -56,16 +76,16 @@
                 } 
                 &:hover{
                     background-color:#DFE3EB66 ;
-                    scale: 1.1;
+                    scale: 1.01;
                     
                 }
-
                 
             }
         }
         .rating{
             position: relative;
             background-color:#DFE3EB66 ;
+            height:100%;
             .quotation{
                 position: absolute;
                 top: 10px;
@@ -80,6 +100,9 @@
                     font-size: 18px;
                 }
             }
+            .ceo{
+                display: none;
+            }
             p{
                 font-size: 30px;
             }
@@ -90,58 +113,9 @@
         .hireme{
             max-width:700px;
             width:100%;
-            max-height:312px;
+            // max-height:312px;
             p{
                 font-size: 22px;
-                padding:50px 200px 10px 200px;
-                color:white;
-            }
-            .hiremebutton{
-                width:150px;
-                height:50px;
-                background-color: #684FFF;
-                color:white;
-                border-radius: 5px;
-                border:none;
-                padding: 0px auto;
-                &:hover{
-                    box-shadow: 0px 0px 10px 0px #684FFF;
-                }
-            }
-        }
-        .client-testimonial{
-            .client{
-                margin-left: 20px;
-            }
-            .rating{
-                .quotation{
-                position: absolute;
-                top: 10px;
-                left: 70%;
-            }
-                .top-rating{
-                    img{
-                        width:20px;
-                        height:20px;
-                    }
-                    p{
-                        font-size: 15px;
-                    }
-                }
-                p{
-                    font-size: 20px;
-                }
-            }
-        } 
-    }
-   @media screen and (max-width: 430px) {
-        padding:5px 20px 20px 20px;
-        .hireme{
-            max-width:400px;
-            width:100%;
-            max-height:252px;
-            p{
-                font-size: 18px;
                 padding:50px 100px 10px 100px;
                 color:white;
             }
@@ -161,14 +135,107 @@
         .client-testimonial{
             .client{
                 .client-content{
-                    margin: 0px 20px;
-                }  
+                    padding:0px;
+                    align-items: center;
+                    .ceo{
+                        display: none;
+                    }
+                }
             }
             .rating{
                 .quotation{
                     position: absolute;
                     top: 10px;
                     left: 70%;
+                }
+                .top-rating{
+                    img{
+                        width:20px;
+                        height:20px;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                }
+                .ceo{
+                    display: block;
+                    font-size: 14px;
+                    margin-left:25px !important;
+                    color: #684FFF;
+                    text-decoration: underline;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 20px;
+                }
+            }
+        } 
+    }
+   @media screen and (max-width: 430px) {
+        padding:5px 20px 0px 20px;
+        .hireme{
+            max-width:400px;
+            width:100%;
+            min-height:252px;
+            p{
+                font-size: 18px;
+                padding:50px 50px 10px 50px;
+                color:white;
+            }
+            .hiremebutton{
+                width:150px;
+                height:50px;
+                background-color: #684FFF;
+                color:white;
+                border-radius: 5px;
+                border:none;
+                padding: 0px auto;
+                &:hover{
+                    box-shadow: 0px 0px 10px 0px #684FFF;
+                }
+            }
+        }
+        .client-testimonial{
+            .client{
+                padding:0px 0px;
+                gap: 1px !important;
+                .nav-link {
+                    position: relative;
+                    &::after {
+                    content: "";
+                    border: 15px solid transparent;
+                    position: absolute;
+                    top: 100%;
+                    right: 15%;
+                    rotate: 90deg;
+                    transform: translateY(-30%);
+                    border-left-color: #DFE3EB66;
+                    opacity: 0;
+                    transition: all 0.2s linear;
+                    }
+                    &.active {
+                    &::after {
+                        opacity: 1;
+                    }
+                    }
+                }
+                .client-content{
+                    margin: 0px 5px 0px 10px;
+                    padding:0px 0px 0px 0px !important;
+
+                    .ceo{
+                        display: none;
+                    }
+                    .name{
+                        display: none;
+                    }
+                }  
+            }
+            .rating{
+                .quotation{
+                    position: absolute;
+                    top: 10px;
+                    left: 60%;
                 }
                 .top-rating{
                     img{

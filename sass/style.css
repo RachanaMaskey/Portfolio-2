@@ -1,6 +1,5 @@
 .navsection {
   padding: 24px 0px;
-  position: sticky;
 }
 .navsection ul {
   list-style-type: none;
@@ -14,11 +13,11 @@
   text-decoration: none;
   color: #0A1931;
 }
-.navsection ul li a:hover {
+.navsection ul li:hover {
   color: #684FFF;
   text-decoration: underline;
   text-decoration-color: #684FFF;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 3px;
   text-underline-offset: 55%;
 }
 .navsection button {
@@ -32,6 +31,9 @@
 .navsection .navmenu {
   display: none;
 }
+.navsection .navmenu button {
+  border: none;
+}
 @media screen and (max-width: 768px) {
   .navsection {
     padding: 14px 0px;
@@ -43,9 +45,8 @@
   .navsection .navmenu {
     display: block;
   }
-  .navsection .navmenu a {
+  .navsection .navmenu .dropdown li:hover {
     text-decoration: none;
-    color: #0A1931;
   }
 }
 
@@ -80,9 +81,19 @@
   border-radius: 4px;
 }
 .hero-info .left-section .hireme {
+  transition: all 0.5s ease;
   background-color: #684FFF;
   color: white;
   margin-right: 20px;
+}
+.hero-info .left-section .hireme:hover {
+  scale: 1.1;
+}
+.hero-info .left-section .view {
+  transition: all 0.5s ease;
+}
+.hero-info .left-section .view:hover {
+  scale: 1.1;
 }
 .hero-info .right-section img {
   margin-left: 200px;
@@ -108,6 +119,8 @@
   right: 0;
   left: 480px;
   bottom: 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hero-info .hero-img img {
   width: 650px;
@@ -177,8 +190,8 @@
   height: 100%;
 }
 .about .aboutimage:hover {
-  scale: 1.1;
-  transition: all 0.5s ease;
+  scale: 1.05;
+  transition: all 0.2s linear;
 }
 .about h2 {
   font-size: 46px;
@@ -189,7 +202,7 @@
   color: #737D8C;
   font-weight: 400;
 }
-.about .info span {
+.about .info .number {
   font-size: 46px;
   color: #684FFF;
   font-weight: 400;
@@ -281,10 +294,13 @@
   }
 }
 @media screen and (max-width: 430px) {
+  .about {
+    padding: 30px 20px 0px 20px;
+  }
   .about .aboutimage {
-    width: 300px;
-    height: 300px;
-    margin-bottom: 40px;
+    width: 325px;
+    height: 325px;
+    margin-bottom: 0px;
     margin: auto;
   }
   .about .aboutimage img {
@@ -305,18 +321,24 @@
 .myservice h4::after {
   content: "";
   position: absolute;
-  left: 47%;
+  left: 50%;
   bottom: -10px;
   width: 70px;
   height: 3px;
+  transform: translateX(-50%);
   background-color: #684FFF;
   border-radius: 2px;
 }
+.myservice a {
+  color: #0A1931;
+  text-decoration: none;
+}
 .myservice .service-content {
+  transition: all 0.3s linear;
   background-color: rgba(223, 227, 235, 0.4);
+  transform-origin: center;
+  position: relative;
   margin-top: 40px;
-  min-height: 300px;
-  transition: all 0.5s ease;
 }
 .myservice .service-content h5 {
   max-width: 150px;
@@ -335,36 +357,27 @@
   background-color: #B2A5FF;
   border-radius: 2px;
 }
-.myservice .service-content a {
-  color: #0A1931;
-  text-decoration: none;
-}
-.myservice .service-content .iconbefore {
-  font-size: 20px;
-}
-.myservice .service-content .iconafter {
-  display: none;
-}
 .myservice .service-content:hover {
-  background-color: white;
+  transform: scale(1.05);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 5px;
-}
-.myservice .service-content:hover .iconafter {
-  display: block;
-  transition: all 0.5s ease;
-  font-size: 16px;
-  font-weight: 600;
-  color: #684FFF;
-}
-.myservice .service-content:hover .iconafter i {
-  padding-left: 15px;
+  background-color: white;
 }
 .myservice .service-content:hover svg path {
   stroke: #684FFF;
 }
-.myservice .service-content:hover .iconbefore {
-  display: none;
+.myservice .description {
+  font-size: 14px;
+  max-width: 0;
+  transition: all 0.5s linear;
+  overflow-x: hidden;
+  white-space: nowrap;
+  color: #684FFF;
+}
+.myservice i {
+  color: #684FFF;
+}
+.myservice .service-content:hover .description {
+  max-width: 150px;
 }
 @media screen and (max-width: 768px) {
   .myservice {
@@ -382,12 +395,16 @@
   }
   .myservice .service-content .iconbefore {
     font-size: 15px;
-    transition: transform 0.3s ease;
+    transition: all 0.3s linear;
   }
 }
 @media screen and (max-width: 430px) {
   .myservice {
-    padding-top: 30px;
+    padding: 30px 20px 0px 20px;
+  }
+  .myservice .description {
+    font-size: 12px;
+    max-width: 150px;
   }
 }
 
@@ -404,57 +421,41 @@
 .myworks h4::after {
   content: "";
   position: absolute;
-  left: 47%;
+  left: 50%;
   bottom: -10px;
   width: 70px;
   height: 3px;
+  transform: translateX(-50%);
   background-color: #684FFF;
   border-radius: 2px;
 }
 .myworks img {
   width: 100%;
-  height: 300px;
+  min-height: 255px;
 }
-.myworks .card {
-  transition: all 0.5s ease;
-  height: 350px;
-}
-.myworks .card .iconhover {
-  position: relative;
-  display: inline-block;
-}
-.myworks .card .iconhover a {
+.myworks a {
   text-decoration: none;
-  color: #684FFF;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
-.myworks .card .iconhover a i {
-  font-size: 20px;
-  font-weight: 200px;
-}
-.myworks .card .iconhover .iconbefore {
-  opacity: 1;
-  z-index: 2;
-}
-.myworks .card .iconhover .iconafter {
-  display: none;
+.myworks .mywork-content .card-title {
+  color: black;
 }
 .myworks .card:hover {
-  scale: 1.1;
+  transform: scale(1.01);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.myworks .card:hover .iconbefore {
-  display: none;
+.myworks .description {
+  font-size: 14px;
+  max-width: 0;
+  transition: all 0.5s linear;
+  overflow-x: hidden;
+  white-space: nowrap;
+  color: #684FFF;
 }
-.myworks .card:hover .iconafter {
-  display: block;
-  width: 150px;
-  opacity: 1;
+.myworks i {
+  color: #684FFF;
 }
-.myworks .card:hover .iconafter i {
-  margin-left: 10px;
+.myworks .card:hover .description {
+  max-width: 150px;
 }
 @media screen and (max-width: 768px) {
   .myworks {
@@ -467,7 +468,11 @@
 }
 @media screen and (max-width: 430px) {
   .myworks {
-    padding: 0px 50px 30px 50px;
+    padding: 0px 20px 30px 20px;
+  }
+  .myworks .description {
+    font-size: 14px;
+    max-width: 150px;
   }
 }
 
@@ -496,7 +501,7 @@
   border-radius: 4px;
 }
 .slider .slider-image div {
-  transition: all 0.5s ease;
+  transition: all 0.3s linear;
   width: 150px;
   height: 110px;
   background-color: rgba(223, 227, 235, 0.4);
@@ -505,11 +510,23 @@
 .slider .slider-image div:hover {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  scale: 1.1;
+  scale: 1.03;
 }
 @media screen and (max-width: 768px) {
   .slider {
     padding: 5px 30px 20px 30px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .slider {
+    padding: 5px 20px 20px 20px;
+  }
+  .slider .slider-image div {
+    width: 145px;
+  }
+  .slider .slider-image div img {
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -546,19 +563,37 @@
 .testimonial .client-testimonial h4::after {
   content: "";
   position: absolute;
-  left: 46%;
+  left: 50%;
   bottom: -10px;
   width: 80px;
   height: 3px;
+  transform: translateX(-50%);
   background-color: #684FFF;
   border-radius: 2px;
 }
 .testimonial .client-testimonial .nav-pills .nav-link.active, .testimonial .client-testimonial .nav-pills .show > .nav-link {
   color: var(--bs-nav-pills-link-active-color);
-  background-color: white;
+  background-color: rgba(223, 227, 235, 0.4);
+}
+.testimonial .client-testimonial .client .nav-link {
+  position: relative;
+}
+.testimonial .client-testimonial .client .nav-link::after {
+  content: "";
+  border: 15px solid transparent;
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  border-left-color: rgba(223, 227, 235, 0.4);
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.testimonial .client-testimonial .client .nav-link.active::after {
+  opacity: 1;
 }
 .testimonial .client-testimonial .client .client-content {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s linear;
 }
 .testimonial .client-testimonial .client .client-content .name {
   color: black;
@@ -571,11 +606,12 @@
 }
 .testimonial .client-testimonial .client .client-content:hover {
   background-color: rgba(223, 227, 235, 0.4);
-  scale: 1.1;
+  scale: 1.01;
 }
 .testimonial .client-testimonial .rating {
   position: relative;
   background-color: rgba(223, 227, 235, 0.4);
+  height: 100%;
 }
 .testimonial .client-testimonial .rating .quotation {
   position: absolute;
@@ -589,6 +625,9 @@
 .testimonial .client-testimonial .rating .top-rating p {
   font-size: 18px;
 }
+.testimonial .client-testimonial .rating .ceo {
+  display: none;
+}
 .testimonial .client-testimonial .rating p {
   font-size: 30px;
 }
@@ -599,55 +638,9 @@
   .testimonial .hireme {
     max-width: 700px;
     width: 100%;
-    max-height: 312px;
   }
   .testimonial .hireme p {
     font-size: 22px;
-    padding: 50px 200px 10px 200px;
-    color: white;
-  }
-  .testimonial .hireme .hiremebutton {
-    width: 150px;
-    height: 50px;
-    background-color: #684FFF;
-    color: white;
-    border-radius: 5px;
-    border: none;
-    padding: 0px auto;
-  }
-  .testimonial .hireme .hiremebutton:hover {
-    box-shadow: 0px 0px 10px 0px #684FFF;
-  }
-  .testimonial .client-testimonial .client {
-    margin-left: 20px;
-  }
-  .testimonial .client-testimonial .rating .quotation {
-    position: absolute;
-    top: 10px;
-    left: 70%;
-  }
-  .testimonial .client-testimonial .rating .top-rating img {
-    width: 20px;
-    height: 20px;
-  }
-  .testimonial .client-testimonial .rating .top-rating p {
-    font-size: 15px;
-  }
-  .testimonial .client-testimonial .rating p {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 430px) {
-  .testimonial {
-    padding: 5px 20px 20px 20px;
-  }
-  .testimonial .hireme {
-    max-width: 400px;
-    width: 100%;
-    max-height: 252px;
-  }
-  .testimonial .hireme p {
-    font-size: 18px;
     padding: 50px 100px 10px 100px;
     color: white;
   }
@@ -664,12 +657,98 @@
     box-shadow: 0px 0px 10px 0px #684FFF;
   }
   .testimonial .client-testimonial .client .client-content {
-    margin: 0px 20px;
+    padding: 0px;
+    align-items: center;
+  }
+  .testimonial .client-testimonial .client .client-content .ceo {
+    display: none;
   }
   .testimonial .client-testimonial .rating .quotation {
     position: absolute;
     top: 10px;
     left: 70%;
+  }
+  .testimonial .client-testimonial .rating .top-rating img {
+    width: 20px;
+    height: 20px;
+  }
+  .testimonial .client-testimonial .rating .top-rating p {
+    font-size: 15px;
+  }
+  .testimonial .client-testimonial .rating .ceo {
+    display: block;
+    font-size: 14px;
+    margin-left: 25px !important;
+    color: #684FFF;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  .testimonial .client-testimonial .rating p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .testimonial {
+    padding: 5px 20px 0px 20px;
+  }
+  .testimonial .hireme {
+    max-width: 400px;
+    width: 100%;
+    min-height: 252px;
+  }
+  .testimonial .hireme p {
+    font-size: 18px;
+    padding: 50px 50px 10px 50px;
+    color: white;
+  }
+  .testimonial .hireme .hiremebutton {
+    width: 150px;
+    height: 50px;
+    background-color: #684FFF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 0px auto;
+  }
+  .testimonial .hireme .hiremebutton:hover {
+    box-shadow: 0px 0px 10px 0px #684FFF;
+  }
+  .testimonial .client-testimonial .client {
+    padding: 0px 0px;
+    gap: 1px !important;
+  }
+  .testimonial .client-testimonial .client .nav-link {
+    position: relative;
+  }
+  .testimonial .client-testimonial .client .nav-link::after {
+    content: "";
+    border: 15px solid transparent;
+    position: absolute;
+    top: 100%;
+    right: 15%;
+    rotate: 90deg;
+    transform: translateY(-30%);
+    border-left-color: rgba(223, 227, 235, 0.4);
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+  .testimonial .client-testimonial .client .nav-link.active::after {
+    opacity: 1;
+  }
+  .testimonial .client-testimonial .client .client-content {
+    margin: 0px 5px 0px 10px;
+    padding: 0px 0px 0px 0px !important;
+  }
+  .testimonial .client-testimonial .client .client-content .ceo {
+    display: none;
+  }
+  .testimonial .client-testimonial .client .client-content .name {
+    display: none;
+  }
+  .testimonial .client-testimonial .rating .quotation {
+    position: absolute;
+    top: 10px;
+    left: 60%;
   }
   .testimonial .client-testimonial .rating .top-rating img {
     width: 20px;
@@ -684,7 +763,7 @@
 }
 
 .blognews {
-  padding: 5px 200px 20px 200px;
+  padding: 5px 200px 10px 200px;
   background: linear-gradient(to bottom, rgba(223, 227, 235, 0.4), white);
 }
 .blognews .blog-content h4 {
@@ -695,10 +774,11 @@
 .blognews .blog-content h4::after {
   content: "";
   position: absolute;
-  left: 45%;
+  left: 50%;
   bottom: -10px;
   width: 80px;
   height: 3px;
+  transform: translateX(-50%);
   background-color: #684FFF;
   border-radius: 2px;
 }
@@ -716,88 +796,34 @@
 .blognews .blog-content .blog p {
   font-size: 16px;
 }
-.blognews .blog-content .blog .card {
-  transition: all 0.5s ease;
-}
-.blognews .blog-content .blog .card .iconhover {
-  position: relative;
-  display: inline-block;
-}
-.blognews .blog-content .blog .card .iconhover a {
+.blognews .blog-content .blog a {
   text-decoration: none;
-  font-size: 12px;
-  color: #684FFF;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 0.5s ease;
-}
-.blognews .blog-content .blog .card .iconhover a i {
-  font-weight: 200px;
-}
-.blognews .blog-content .blog .card .iconhover .iconbefore {
-  opacity: 1;
-  z-index: 1;
-}
-.blognews .blog-content .blog .card .iconhover .iconafter {
-  display: none;
+  color: black;
 }
 .blognews .blog-content .blog .card:hover {
-  scale: 1.1;
+  transform: scale(1.01);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.blognews .blog-content .blog .card:hover .iconbefore {
-  display: none;
-}
-.blognews .blog-content .blog .card:hover .iconafter {
-  display: block;
-  width: 150px;
-  opacity: 1;
-  z-index: 1;
-}
-.blognews .blog-content .blog .card:hover .iconafter i {
-  margin-left: 10px;
-}
-.blognews .blog-content .blog .bloglink {
-  transition: all 0.5s ease;
-}
-.blognews .blog-content .blog .bloglink .iconhover {
-  position: relative;
-  display: inline-block;
-}
-.blognews .blog-content .blog .bloglink .iconhover a {
-  text-decoration: none;
-  font-size: 12px;
+.blognews .blog-content .blog .discuss {
+  font-size: 14px;
+  max-width: 0;
+  transition: all 0.5s linear;
+  overflow-x: hidden;
+  white-space: nowrap;
   color: #684FFF;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
-.blognews .blog-content .blog .bloglink .iconhover a i {
-  font-weight: 200px;
+.blognews .blog-content .blog i {
+  color: #684FFF;
 }
-.blognews .blog-content .blog .bloglink .iconhover .iconbefore {
-  opacity: 1;
-  z-index: 1;
-}
-.blognews .blog-content .blog .bloglink .iconhover .iconafter {
-  display: none;
+.blognews .blog-content .blog .card:hover .discuss {
+  max-width: 150px;
 }
 .blognews .blog-content .blog .bloglink:hover {
-  scale: 1.1;
+  transform: scale(1.01);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.blognews .blog-content .blog .bloglink:hover .iconbefore {
-  display: none;
-}
-.blognews .blog-content .blog .bloglink:hover .iconafter {
-  display: block;
-  width: 150px;
-  opacity: 1;
-  z-index: 1;
-}
-.blognews .blog-content .blog .bloglink:hover .iconafter i {
-  margin-left: 10px;
+.blognews .blog-content .blog .bloglink:hover .discuss {
+  max-width: 150px;
 }
 @media screen and (max-width: 768px) {
   .blognews {
@@ -812,7 +838,11 @@
 }
 @media screen and (max-width: 430px) {
   .blognews {
-    padding: 5px 50px 20px 50px;
+    padding: 5px 20px 20px 20px;
+  }
+  .blognews .discuss {
+    font-size: 14px;
+    max-width: 150px;
   }
 }
 
@@ -829,9 +859,9 @@
 }
 .contact .dot {
   position: absolute;
-  top: 50px;
+  top: 40px;
   right: 0;
-  left: 900px;
+  left: 975px;
   bottom: 0px;
   z-index: 3;
 }
@@ -873,15 +903,16 @@
   box-shadow: 0px 0px 10px 0px #684FFF;
 }
 .contact .contact-content .get-in-touch {
+  height: 100%;
   border-radius: 8px;
 }
 .contact .contact-content .get-in-touch p {
   font-size: 14px;
 }
 .contact .contact-content .get-in-touch .get-icon {
-  width: calc(100% - 40px);
-  width: 40px;
-  height: 40px;
+  width: calc(100% - 50px);
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: #F5EFFF;
 }
@@ -920,6 +951,9 @@
     padding: 5px 50px 20px 50px;
     margin-top: 50px;
   }
+  .contact .get-in-touch {
+    min-width: 300px;
+  }
 }
 @media screen and (max-width: 430px) {
   .contact img {
@@ -928,7 +962,7 @@
   }
   .contact .dot {
     top: 20px;
-    left: 250px;
+    left: 220px;
   }
   .contact .dot img {
     width: 300px;
@@ -942,7 +976,7 @@
     font-size: 22px;
   }
   .contact .contact-content .contact-form {
-    min-width: 400px;
+    min-width: 320px;
     min-height: 300px;
     border-radius: 5px;
   }
@@ -957,6 +991,10 @@
   }
   .contact .contact-content .contact-form form input {
     max-width: 450px;
+  }
+  .contact .contact-content .get-in-touch {
+    margin-top: 20px;
+    min-width: 320px;
   }
 }
 

@@ -10,9 +10,9 @@
     }
     .dot{
         position: absolute;
-        top: 50px;
+        top: 40px;
         right: 0;
-        left:900px;
+        left:975px;
         bottom:0px;
         z-index: 3;
         img{
@@ -59,14 +59,15 @@
             }
         }
         .get-in-touch{
+            height:100%;
             border-radius: 8px;
             p{
                 font-size: 14px;
             }
             .get-icon{
-                width:calc(100% - 40px);
-                width:40px;
-                height:40px;
+                width:calc(100% - 50px);
+                width:50px;
+                height:50px;
                 border-radius: 50%;
                 background-color: #F5EFFF;
                 svg{
@@ -107,6 +108,9 @@
             padding:5px 50px 20px 50px;
             margin-top:50px;
         }
+        .get-in-touch{
+            min-width: 300px;
+        }
     }
     @media screen and (max-width: 430px) {
         img{
@@ -115,7 +119,7 @@
         }
         .dot{
             top: 20px;
-            left:250px;
+            left:220px;
             img{
                 width: 300px;
                 height: 100px;       
@@ -128,7 +132,7 @@
                 font-size: 22px;
             }
             .contact-form{
-                min-width:400px;
+                min-width:320px;
                 min-height:300px;
                 border-radius: 5px;
                 form{
@@ -147,6 +151,10 @@
                         max-width: 450px;
                     }
                 }
+            }
+            .get-in-touch{
+                margin-top: 20px;
+                min-width:320px;
             }
         }
     }
